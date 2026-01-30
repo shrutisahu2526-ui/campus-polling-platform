@@ -1,0 +1,58 @@
+<!doctype html> 
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Campus Poll — Fast Vote</title>
+  <link rel="stylesheet" href="style.css">
+  
+  <!-- Open Graph / SEO -->
+  <meta property="og:title" content="Campus Pulse — Live Student Polling">
+  <meta property="og:description" content="Cast your vote on campus issues instantly. Real-time updates and results.">
+  <meta property="og:type" content="website">
+  <meta name="description" content="A demo platform for real-time campus polling and student voting.">
+</head>
+<body>
+  <header class="topbar pulse-header">
+    <div class="brand">
+      <h1>Campus Pulse</h1>
+      <p class="tag">Live student opinions • Updates instantly</p>
+    </div>
+    <div class="status">
+      <div class="live-indicator"><span class="dot blink"></span> <span id="liveCount">742</span> students voting right now</div>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section class="main-card" id="mainCard">
+      <div class="meta-row">
+        <div class="hot">🔥 Hot Poll</div>
+        <div id="pollTimer" class="timer">⏳ Closes in: —</div>
+      </div>
+
+      <div id="pollQuestion" class="question">Loading poll…</div>
+      <div id="sentiment" class="sentiment">🔥 Popular • 👍 68%</div>
+
+      <div id="options" class="options"></div>
+
+      <div id="postVote" class="post-vote hidden">
+        <div class="thanks">✔ Vote recorded</div>
+        <div id="results" class="results"></div>
+        <div class="live-note">Results update as more students vote.</div>
+
+        <div class="social-proof">
+          <h3>Recent activity</h3>
+          <ul id="recentActivity" class="activity-list"></ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="recent" id="recent">
+      <h2>Other active polls</h2>
+      <div id="recentList" class="recent-cards"></div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
